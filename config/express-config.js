@@ -31,6 +31,7 @@ app.use(expressValidator());
 
 consign({cwd: 'app'})
   .include('/middlewares')
+  .then('/models')
   .then('/services')
   .then('/controllers')
   .then('routes.js')

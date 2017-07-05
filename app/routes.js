@@ -1,15 +1,15 @@
 
 module.exports = (app) => {
     const routes = {
-        client: app.controllers.client.clientController(),
-        auth: app.controllers.auth.authController(),
+        client: app.controllers['chat-controller'].chatController(),
+        auth: app.controllers['auth-controller'].authController(),
     }
 
     const middlewares = {
-        clientForm: app.middlewares.forms.client.clientForm,
-        authForm: app.middlewares.forms.auth.authForm,
+        clientForm: app.middlewares.forms['chat-form'].chatForm,
+        authForm: app.middlewares.forms['auth-form'].authForm,
     }
 
-    app.post("/v1/api/client.py", middlewares.clientForm, routes.client.saveClient)
-    app.post("/v1/api/auth.py", middlewares.authForm, routes.auth.getAuthToken)
+    app.post("/v1/chatbot.py", middlewares.clientForm, routes.client.saveChat)
+    app.post("/v1/auth.py", middlewares.authForm, routes.auth.getAuthToken)
 }

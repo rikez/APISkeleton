@@ -1,4 +1,4 @@
-const chatService = require('../services/chat-service').chat()
+const chatService = require('../services/chat.service').chat()
 const _ = require('lodash')
 
 exports.chatController = () => {

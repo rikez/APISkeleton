@@ -1,6 +1,6 @@
 const _ = require('lodash');
-const authService = require('../services/auth-service').authorize()
-const cryptoService = require('../services/cryptograph-service').cryptograph()
+const authService = require('../services/auth.service').authorize()
+const cryptoService = require('../services/crypto.service').cryptograph()
 
 exports.authController = () => {
 

@@ -1,4 +1,4 @@
-const apiService = require('../services/api-service').api()
+const apiService = require('../services/api.service').api()
 
 exports.authorize = () => {
 
